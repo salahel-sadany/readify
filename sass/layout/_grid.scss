@@ -1,0 +1,8 @@
+.grid-col-2 {
+  @include grid-pos;
+  @include center;
+  column-gap: 4.25rem;
+  row-gap: 9.6rem;
+  // grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+}

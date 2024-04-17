@@ -1,0 +1,24 @@
+.section-hero {
+  padding: 6rem 14rem;
+
+  background-image: linear-gradient(
+    to right top,
+    rgba(#f7e0d5, 0.7),
+    rgba(#fcf5f1, 0.2)
+  );
+}
+
+.hero {
+  &__content {
+  }
+
+  &__text {
+    font-size: 1.6rem;
+  }
+
+  &__img {
+    display: block;
+    height: 40rem;
+    // width: 100%;
+  }
+}

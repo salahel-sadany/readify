@@ -1,0 +1,96 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 2fr);
+  column-gap: 4.25rem;
+  justify-items: center;
+  align-items: center;
+  padding: 2rem 4rem;
+  // background-color: #fcf5f1;
+
+  border-bottom: solid 2px $color-tertiary;
+
+  .search {
+    @include flex-pos;
+    font-size: 1.4rem;
+
+    width: 100%;
+    margin-left: 5rem;
+    &__input {
+      border: none;
+      background-color: $color-gray-light-1;
+      padding: 0.7rem 2rem;
+      width: 90%;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      font-weight: inherit;
+      border-radius: 100px;
+      transition: all 0.3s;
+
+      &:focus {
+        outline: none;
+        width: 100%;
+        background-color: #eff5f7;
+      }
+
+      &::placeholder {
+        color: #adc0c7;
+        font-weight: 300;
+      }
+    }
+
+    &__button {
+      border: none;
+      background: none;
+      margin-left: -3.25rem;
+    }
+
+    &__icon {
+      width: 1.75rem;
+      height: 1.75rem;
+      fill: #99b1b9;
+    }
+  }
+
+  .user-nav {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    @include flex-pos;
+    gap: 1rem;
+
+    a::after {
+      content: "";
+      height: 2px;
+      width: 0%;
+      display: block;
+      background-color: $color-tertiary;
+
+      transition: all 0.2s;
+    }
+
+    a:is(:link, :visited) {
+      text-decoration: none;
+      color: $color-primary;
+    }
+
+    a:is(:hover, :active)::after {
+      width: 100%;
+    }
+
+    div {
+      @include flex-pos;
+
+      gap: 0.8rem;
+    }
+
+    div:not(:last-child):after {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 1.3rem;
+      background-color: $color-tertiary;
+      margin-left: 0.7rem;
+    }
+  }
+}

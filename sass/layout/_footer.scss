@@ -1,0 +1,61 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6rem 0;
+  background-color: $color-primary;
+
+  .logo {
+    color: #e8e9f8;
+  }
+
+  &__nav-list {
+    .list-link:is(:link, :visited) {
+      text-decoration: none;
+      color: #e8e9f8;
+      font-size: 1.6rem;
+      display: inline-block;
+      border-radius: 100px;
+      padding: 0 0.3rem;
+      transition: all 0.2s;
+    }
+
+    .list-link:is(:hover, :active) {
+      color: $color-primary;
+      background-color: #e8e9f8;
+    }
+
+    list-style: none;
+    gap: 3rem;
+
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .contacts {
+    font-style: normal;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 0.3rem;
+    flex-direction: column;
+    align-items: center;
+    color: #e8e9f8;
+
+    .contact-btn {
+      &:is(:link, :visited) {
+        text-align: center;
+        font-size: 1.4rem;
+        padding: 0 1.5rem;
+        text-decoration: none;
+        color: inherit;
+        border: 2px solid currentColor;
+        border-radius: 3px;
+        transition: all 0.2s;
+      }
+
+      &:is(:hover, :active) {
+        border: 2px solid transparent;
+      }
+    }
+  }
+}

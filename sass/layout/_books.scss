@@ -1,0 +1,143 @@
+.section-books {
+  // @include center;
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 12.8rem 6rem 6rem;
+
+  .section-books__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .catagories {
+    &__list {
+      @include flex-pos;
+      list-style: none;
+      // gap: 3.25rem;
+    }
+
+    &__item {
+    }
+
+    &__link:is(:link, :visited) {
+      color: inherit;
+      font-size: 1.6rem;
+      display: block;
+      text-decoration: none;
+    }
+  }
+
+  .cards {
+    @include grid-pos;
+
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+    column-gap: 5rem;
+    row-gap: 5rem;
+    .card {
+      width: 100%;
+      padding: 3rem 3rem;
+      background-color: #f1f3f5;
+      border-radius: 5px;
+      box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.1);
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.05) translateY(-1.2rem);
+      }
+
+      &__img {
+        height: 20rem;
+        // margin-left: -3rem;
+        display: block;
+        margin-bottom: 2.4rem;
+      }
+
+      &__content {
+        // padding: 1.5rem 3.5rem;
+        text-align: center;
+      }
+
+      &__price {
+        // text-align: center;
+        .number {
+          font-family: $font-display;
+          font-size: 4rem;
+          font-weight: 700;
+          color: $color-tertiary;
+        }
+
+        .Epound {
+          font-size: 1.8rem;
+        }
+      }
+
+      &__text-box {
+      }
+
+      &__name {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      &__author {
+        font-size: 1rem;
+      }
+
+      &__cta-box {
+        @include flex-pos;
+        gap: 2rem;
+      }
+
+      &__addtocart:is(:link, :visited) {
+        text-decoration: none;
+        color: #f1f3f5;
+        background-color: $color-primary;
+        display: inline-block;
+        padding: 0.8rem 1.6rem;
+
+        border-radius: 3px;
+        transition: all 0.2s;
+      }
+
+      &__addtocart:is(:hover, :active) {
+        background-color: $color-primary-dark;
+      }
+
+      &__icon {
+        width: 2.4rem;
+        height: 2.4rem;
+        fill: $color-primary;
+      }
+    }
+  }
+
+  .view-products-container {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.4rem;
+
+    .view-products {
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $color-tertiary;
+        opacity: 0;
+        transition: all 0.2s;
+      }
+
+      &:is(:link, :visited) {
+        text-decoration: none;
+        color: $color-tertiary;
+        display: inline-block;
+      }
+
+      &:is(:hover, :active)::after {
+        opacity: 1;
+      }
+    }
+  }
+}

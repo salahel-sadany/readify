@@ -1,0 +1,39 @@
+.u-mb-vsm {
+  margin-bottom: 2rem;
+}
+
+.u-mb-sm {
+  margin-bottom: 2.4rem;
+}
+
+.u-mb-md {
+  margin-bottom: 4rem;
+}
+
+.u-mb-lg {
+  margin-bottom: 6rem;
+}
+
+.u-font-display {
+  font-family: $font-display;
+}
+
+.link-hov::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  display: block;
+  background-color: $color-tertiary;
+
+  transition: all 0.2s;
+}
+
+.link-hov:is(:link, :visited) {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 4rem;
+}
+
+.link-hov:is(:hover, :active)::after {
+  width: 100%;
+}

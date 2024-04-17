@@ -1,0 +1,48 @@
+.nav {
+  margin: 2.25rem 0;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  &__list {
+    @include flex-pos;
+    list-style: none;
+    // gap: 3.5rem;
+  }
+
+  &__item {
+    @include flex-pos;
+  }
+
+  &__item:not(:last-child):after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 1.3rem;
+    background-color: $color-tertiary;
+  }
+
+  &__link--home:is(:link, :visited) {
+    font-weight: 700;
+  }
+
+  &__link::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    display: block;
+    background-color: $color-tertiary;
+
+    transition: all 0.2s;
+  }
+
+  &__link:is(:link, :visited) {
+    text-decoration: none;
+    color: inherit;
+    padding: 0 4rem;
+  }
+
+  &__link:is(:hover, :active)::after {
+    width: 100%;
+  }
+}

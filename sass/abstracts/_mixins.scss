@@ -1,0 +1,16 @@
+@mixin flex-pos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-pos {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+@mixin center {
+  max-width: 120rem;
+  margin: 0 auto;
+}
