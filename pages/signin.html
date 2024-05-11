@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../img/Books Logo .png" />
+    <link rel="apple-touch-icon" href="../img/Books Logo .png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Readify | Login</title>
+  </head>
+  <body class="signin">
+    <form action="#" class="signin__form">
+      <legend class="heading-secondary u-mb-lg">Welcome back!</legend>
+
+      <p class="email">
+        <label for="signin__email" class="signin__email-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="signin__email input-box"
+          id="signin__email"
+          placeholder="example@gmail.com"
+        />
+      </p>
+
+      <p class="password">
+        <div class="flx">
+          <label for="signin__password" class="signin__password-label"
+          >password</label
+          >
+          <a href="#">forgot password</a>
+        </div>
+
+        <input
+          type="password"
+          class="signin__password input-box"
+          id="signin__password"
+          placeholder="password"
+        />
+      </p>
+
+      <p class="policy">
+        <input type="checkbox" class="signin__policy" id="signin__policy" />
+
+        <label for="signin__policy" class="signin__policy-label"
+          >Remember me for 30 days
+        </label>
+      </p>
+
+      <button class="signin__button u-mb-sm">Login</button>
+      <span class="have-account"
+        >Don't have an account? <a href="signup.html">Sign up</a></span
+      >
+    </form>
+    <div class="img-box" aria-label="signin img" role="img"></div>
+  </body>
+</html>

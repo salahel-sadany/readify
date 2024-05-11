@@ -1,0 +1,108 @@
+.signin {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // justify-items: center;
+
+  .img-box {
+    background-color: $color-primary;
+
+    background-image: url("../img/Books Template 2 .png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+  }
+}
+
+.signin__form * {
+  display: block;
+}
+
+.signin__form {
+  justify-self: center;
+  align-self: center;
+  width: 55%;
+  scale: 0.9;
+  label {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    display: inline-block;
+  }
+
+  p {
+    margin-bottom: 2.4rem;
+  }
+
+  .input-box:focus {
+    box-shadow: 0 0 0 0.4rem rgba($color-tertiary, 0.5);
+  }
+
+  .input-box::placeholder {
+    font-family: inherit;
+    color: rgba($color-gray-dark-1, 0.6);
+  }
+
+  .input-box {
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 1.2rem;
+    font-family: inherit;
+    border: 1px solid rgba($color-gray-dark-1, 0.3);
+    border-radius: 11px;
+  }
+
+  .flx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a:is(:link, :visited) {
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: $color-secondary;
+    }
+  }
+
+  .policy {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    label {
+      margin-top: 1rem;
+    }
+  }
+
+  .terms-policy {
+    display: inline-block;
+  }
+
+  .have-account {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    a:is(:link, :visited) {
+      display: inline-block;
+      text-decoration: none;
+      color: $color-secondary;
+    }
+  }
+}
+
+.signin__button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 1.4rem;
+  font-size: 2.2rem;
+  font-family: inherit;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 11px;
+  background-color: $color-primary;
+}

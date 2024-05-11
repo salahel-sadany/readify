@@ -1,7 +1,7 @@
 .logo {
   @include flex-pos;
-
   gap: 1.5rem;
+  cursor: pointer;
 
   &__img {
     height: 6rem;

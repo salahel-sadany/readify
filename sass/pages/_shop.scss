@@ -1,0 +1,57 @@
+.shop-page {
+  .header {
+    display: block;
+    background-image: url("../img/Library\ 1.jpg");
+    background-color: $color-primary;
+
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: hard-light;
+    filter: hue-rotate(330deg) saturate(1.5);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .header div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .header .user-nav a:is(:link, :visited) {
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+
+  .header .nav-icon {
+    fill: #fff;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .heading-primary {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+    font-size: 5.5rem;
+    letter-spacing: 5px;
+    color: #fff;
+  }
+
+  .search {
+    flex-basis: 30%;
+  }
+
+  .cards {
+    margin-inline: auto;
+    width: 60%;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+    column-gap: 5rem;
+    row-gap: 5rem;
+  }
+
+  .card {
+    text-align: center;
+  }
+}

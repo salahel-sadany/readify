@@ -58,13 +58,31 @@
           <a href="#" class="user-nav__favourite-text">Favourite</a>
         </div>
       </nav>
+
+      <div class="bg-sign">
+        <div class="sign">
+          <button class="close-icon">
+            <svg class="close-icon">
+              <use xlink:href="img/sprite.svg#icon-x"></use>
+            </svg>
+          </button>
+          <a href="pages/signin.html" target="_blank" class="signin__button"
+            >Login</a
+          >
+          <a href="pages/signup.html" target="_blank" class="signup__button"
+            >Sign up</a
+          >
+        </div>
+      </div>
     </header>
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item">
           <a href="#" class="nav__link nav__link--home">Home</a>
         </li>
-        <li class="nav__item"><a href="#" class="nav__link">Books</a></li>
+        <li class="nav__item">
+          <a href="pages/shop.html" class="nav__link">Books</a>
+        </li>
         <li class="nav__item"><a href="#" class="nav__link">Best Sales</a></li>
         <li class="nav__item"><a href="#" class="nav__link">About us</a></li>
         <li class="nav__item"><a href="#" class="nav__link">Contact Us</a></li>
@@ -123,7 +141,7 @@
                 <span class="Epound"> E&pound; </span>
               </div>
 
-              <div class="card__text-box u-mb-sm">
+              <div class="card__text-box u-mb-vsm">
                 <p class="card__name">Rich dad poor dad</p>
                 <p class="card__author">Robert Kiyosaki</p>
               </div>
@@ -131,7 +149,7 @@
               <div class="card__cta-box">
                 <a href="#" class="card__addtocart">Add to cart</a>
                 <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  <use xlink:href="img/sprite2.svg#icon-favorite"></use>
                 </svg>
               </div>
             </div>
@@ -145,7 +163,7 @@
                 <span class="Epound"> E&pound; </span>
               </div>
 
-              <div class="card__text-box u-mb-sm">
+              <div class="card__text-box u-mb-vsm">
                 <p class="card__name">The 48 law of power</p>
                 <p class="card__author">Robert Greene</p>
               </div>
@@ -153,7 +171,7 @@
               <div class="card__cta-box">
                 <a href="#" class="card__addtocart">Add to cart</a>
                 <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  <use xlink:href="img/sprite2.svg#icon-favorite"></use>
                 </svg>
               </div>
             </div>
@@ -167,7 +185,7 @@
                 <span class="Epound"> E&pound; </span>
               </div>
 
-              <div class="card__text-box u-mb-sm">
+              <div class="card__text-box u-mb-vsm">
                 <p class="card__name">Atomic Habits</p>
                 <p class="card__author">James clear</p>
               </div>
@@ -175,7 +193,7 @@
               <div class="card__cta-box">
                 <a href="#" class="card__addtocart">Add to cart</a>
                 <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  <use xlink:href="img/sprite2.svg#icon-favorite"></use>
                 </svg>
               </div>
             </div>
@@ -189,7 +207,7 @@
                 <span class="Epound"> E&pound; </span>
               </div>
 
-              <div class="card__text-box u-mb-sm">
+              <div class="card__text-box u-mb-vsm">
                 <p class="card__name">Mental Wellness</p>
                 <p class="card__author">Pat Thomas</p>
               </div>
@@ -197,7 +215,7 @@
               <div class="card__cta-box">
                 <a href="#" class="card__addtocart">Add to cart</a>
                 <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  <use xlink:href="img/sprite2.svg#icon-favorite"></use>
                 </svg>
               </div>
             </div>
@@ -211,7 +229,7 @@
                 <span class="Epound"> E&pound; </span>
               </div>
 
-              <div class="card__text-box u-mb-sm">
+              <div class="card__text-box u-mb-vsm">
                 <p class="card__name">Alula Ever</p>
                 <p class="card__author">Saudi Oasis</p>
               </div>
@@ -219,14 +237,16 @@
               <div class="card__cta-box">
                 <a href="#" class="card__addtocart">Add to cart</a>
                 <svg class="card__icon">
-                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                  <use xlink:href="img/sprite2.svg#icon-favorite"></use>
                 </svg>
               </div>
             </div>
           </figure>
         </div>
         <div class="view-products-container">
-          <a href="#" class="view-products">View All Products &rarr;</a>
+          <a href="pages/shop.html" class="view-products"
+            >View All Products &rarr;</a
+          >
         </div>
       </section>
 
@@ -323,5 +343,7 @@
         <a href="tel:+20 103 342 0297" class="contact-btn">request a call</a>
       </address>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

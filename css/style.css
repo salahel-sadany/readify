@@ -12,6 +12,11 @@ html {
 
 body {
   box-sizing: border-box;
+  position: relative;
+}
+
+*:focus {
+  outline: none;
 }
 
 body {
@@ -107,6 +112,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  cursor: pointer;
 }
 .logo__img {
   height: 6rem;
@@ -159,7 +165,7 @@ body {
 }
 .section-books .cards .card {
   width: 100%;
-  padding: 3rem 3rem;
+  padding: 2rem 3rem;
   background-color: #f1f3f5;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -169,16 +175,15 @@ body {
   transform: scale(1.05) translateY(-1.2rem);
 }
 .section-books .cards .card__img {
-  height: 20rem;
-  display: block;
-  margin-bottom: 2.4rem;
+  height: 18rem;
+  display: inline-block;
 }
 .section-books .cards .card__content {
   text-align: center;
 }
 .section-books .cards .card__price .number {
   font-family: "Madimi One", sans-serif;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #e39774;
 }
@@ -211,9 +216,15 @@ body {
   background-color: #234551;
 }
 .section-books .cards .card__icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  fill: #326273;
+  width: 3.2rem;
+  height: 3.2rem;
+  stroke: #326273;
+  fill: none;
+  cursor: pointer;
+}
+.section-books .cards .card .fav {
+  fill: red;
+  stroke: red;
 }
 .section-books .view-products-container {
   display: flex;
@@ -388,6 +399,55 @@ body {
   margin-left: 0.7rem;
 }
 
+.bg-sign {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+  visibility: hidden;
+}
+
+.sign {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 50rem;
+  height: 40rem;
+  border-radius: 13px;
+  z-index: 99;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 8rem;
+}
+.sign .signin__button:is(:link, :visited) {
+  text-decoration: none;
+}
+.sign .signup__button:is(:link, :visited) {
+  text-decoration: none;
+}
+.sign .close-icon {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  width: 2.4rem;
+  height: 2.4rem;
+  top: 2%;
+  right: 2%;
+}
+
+.active {
+  visibility: visible;
+}
+
 .section-hero {
   padding: 6rem 14rem;
   background-image: linear-gradient(to right top, rgba(247, 224, 213, 0.7), rgba(252, 245, 241, 0.2));
@@ -552,6 +612,236 @@ body {
   font-size: 2.4rem;
   color: #e39774;
   font-weight: 700;
+}
+
+.shop-page .header {
+  display: block;
+  background-image: url("../img/Library 1.jpg");
+  background-color: #326273;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: hard-light;
+  filter: hue-rotate(330deg) saturate(1.5);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.shop-page .header div {
+  display: flex;
+  justify-content: space-around;
+}
+.shop-page .header .user-nav a:is(:link, :visited) {
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+}
+.shop-page .header .nav-icon {
+  fill: #fff;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+.shop-page .heading-primary {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+  font-size: 5.5rem;
+  letter-spacing: 5px;
+  color: #fff;
+}
+.shop-page .search {
+  flex-basis: 30%;
+}
+.shop-page .cards {
+  margin-inline: auto;
+  width: 60%;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  column-gap: 5rem;
+  row-gap: 5rem;
+}
+.shop-page .card {
+  text-align: center;
+}
+
+.signin {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.signin .img-box {
+  background-color: #326273;
+  background-image: url("../img/Books Template 2 .png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+
+.signin__form * {
+  display: block;
+}
+
+.signin__form {
+  justify-self: center;
+  align-self: center;
+  width: 55%;
+  scale: 0.9;
+}
+.signin__form label {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+}
+.signin__form p {
+  margin-bottom: 2.4rem;
+}
+.signin__form .input-box:focus {
+  box-shadow: 0 0 0 0.4rem rgba(227, 151, 116, 0.5);
+}
+.signin__form .input-box::placeholder {
+  font-family: inherit;
+  color: rgba(153, 153, 153, 0.6);
+}
+.signin__form .input-box {
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  font-family: inherit;
+  border: 1px solid rgba(153, 153, 153, 0.3);
+  border-radius: 11px;
+}
+.signin__form .flx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signin__form .flx a:is(:link, :visited) {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #5c9ead;
+}
+.signin__form .policy {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.signin__form .policy label {
+  margin-top: 1rem;
+}
+.signin__form .terms-policy {
+  display: inline-block;
+}
+.signin__form .have-account {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.signin__form .have-account a:is(:link, :visited) {
+  display: inline-block;
+  text-decoration: none;
+  color: #5c9ead;
+}
+
+.signin__button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 1.4rem;
+  font-size: 2.2rem;
+  font-family: inherit;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 11px;
+  background-color: #326273;
+}
+
+.signup {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.signup .img-box {
+  background-color: #e39774;
+  background-image: url("../img/Books Template 3 .png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
+}
+
+.signup__form * {
+  display: block;
+}
+
+.signup__form {
+  justify-self: center;
+  align-self: center;
+  width: 55%;
+  scale: 0.9;
+}
+.signup__form label {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+}
+.signup__form p {
+  margin-bottom: 2.4rem;
+}
+.signup__form .input-box:focus {
+  box-shadow: 0 0 0 0.4rem rgba(227, 151, 116, 0.5);
+}
+.signup__form .input-box::placeholder {
+  font-family: inherit;
+  color: rgba(153, 153, 153, 0.6);
+}
+.signup__form .input-box {
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  font-family: inherit;
+  border: 1px solid rgba(153, 153, 153, 0.3);
+  border-radius: 11px;
+}
+.signup__form .policy {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.signup__form .policy label {
+  margin-top: 1rem;
+}
+.signup__form .terms-policy {
+  display: inline-block;
+  text-decoration: none;
+}
+.signup__form .have-account {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.signup__form .have-account a:is(:link, :visited) {
+  display: inline-block;
+  text-decoration: none;
+  color: #5c9ead;
+}
+
+.signup__button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 1.4rem;
+  font-size: 2.2rem;
+  font-family: inherit;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 11px;
+  background-color: #e39774;
 }
 
 /*# sourceMappingURL=style.css.map */
